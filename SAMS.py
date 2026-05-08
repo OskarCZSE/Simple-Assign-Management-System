@@ -138,10 +138,10 @@ def format_assignment_to_csv(assignments, csv_path, week_days=weekDays, encoding
         for d in week_days:
             present = any((p.uid == q.uid and p.desk == q.desk) for q in assignments.get(d, []))
             if present:
-                row.append("X")
+                row.append("8")
                 weekday_totals[d] += 1
             else:
-                row.append("-")
+                row.append("Z")
         rows.append(row)
 
     totals_row = ["", "", "", "", ""]
